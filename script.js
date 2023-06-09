@@ -2,13 +2,15 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {};
+    return {
+      ArrSong: [],
+    };
   },
 
   methods: {
     requestAlbums() {
       axios
-        .get("http://localhost/progetti-boolean/PHP/server.php")
+        .get("http://localhost:8888/php-dischi-json/server.php")
         .then(response => (this.arr_Song = response.data));
     },
   },
