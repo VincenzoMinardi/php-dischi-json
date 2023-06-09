@@ -1,4 +1,5 @@
 <?php
+// Collegare con file_get_contents il file Json per far vedere tutto a schermo
 $ArrSong = file_get_contents('cards-albums.json');
 // $ArrSong = [
 //     [
@@ -39,7 +40,11 @@ $ArrSong = file_get_contents('cards-albums.json');
 //     ]
 // ];
 
+// Serve Per generare l'array da file PHP a file JSON
+
 $json_string = json_encode($ArrSong);
 // file_put_contents('cards-albums.json', $json_string);
+
+// Stampare a schermo l'array
 
 echo ($ArrSong);
